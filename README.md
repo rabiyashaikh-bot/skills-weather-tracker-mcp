@@ -54,3 +54,22 @@ You ──prompt──▶ Copilot Agent Mode
 ---
 
 © 2026 • [MIT License](LICENSE)
+
+## CLI Usage
+
+Add a current weather observation for a city, list recent observations, or view
+temperature statistics for a city:
+
+```sh
+node src/cli.js add "London"
+node src/cli.js list --limit 10
+node src/cli.js stats "London"
+```
+
+Equivalent npm scripts are available with arguments after `--`:
+
+```sh
+npm run add -- "London"
+npm run list -- --limit 10
+npm run stats -- "London"
+```
