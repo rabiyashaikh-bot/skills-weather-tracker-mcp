@@ -1,4 +1,4 @@
-CREATE TABLE weather_logs (
+CREATE TABLE IF NOT EXISTS weather_logs (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   city TEXT NOT NULL,
   country TEXT,
@@ -12,5 +12,5 @@ CREATE TABLE weather_logs (
   created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE INDEX idx_weather_logs_city_created_at
+CREATE INDEX IF NOT EXISTS idx_weather_logs_city_created_at
   ON weather_logs (city, created_at);
